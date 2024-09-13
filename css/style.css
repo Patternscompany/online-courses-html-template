@@ -153,13 +153,13 @@ sup {
 }
 
 a {
-  color: #FF6600;
+  color: var(--second);
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #b34700;
+  color: var(--second);
   text-decoration: underline;
 }
 
@@ -9967,4 +9967,12 @@ h6,
 /* Home */
 .directory-heading{
   color: var(--first) !important;
+}
+
+.bg-first{
+  background-color: var(--first);
+}
+
+.directory-card{
+  min-height: 370px;
 }
