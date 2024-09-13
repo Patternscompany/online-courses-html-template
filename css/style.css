@@ -7,7 +7,7 @@
  */
 :root {
   --first: #280f91;
-  --second: #3c96fa;
+  --second: #27e6ff;
   --third: #e687b9;
   --blue: #007bff;
   --indigo: #6610f2;
@@ -9975,4 +9975,25 @@ h6,
 
 .directory-card{
   min-height: 370px;
+}
+
+.hero-bg-img{
+
+}
+
+.navbar-bg{
+  background-color: #e5fbff;
+}
+.upskill-container .mt-5 p{
+  font-size: 15px;
+  padding-bottom: 30px;
+}
+.upskill-heading{
+  letter-spacing: 2px;
+  font-size: 2.3rem;
+}
+
+.text-second{
+  color: var(--second);
+  font-weight: 500 !important;
 }
