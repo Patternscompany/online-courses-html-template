@@ -10443,7 +10443,7 @@ h6,
   border-radius: 15px;
 }
 .text-first {
-  color: var(--first);
+  color: var(--first) !important;
 }
 
 .link-heading {
