@@ -79,22 +79,11 @@
                             <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
                             <a href="achievements.html" class="nav-item nav-link">Achievements</a>
-                            <!-- <a href="teacher.html" class="nav-item nav-link">Teachers</a> -->
-                            <!-- <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="blog.html" class="dropdown-item">Blog List</a>
-                                    <a href="single.html" class="dropdown-item">Blog Detail</a>
-                                </div>
-                            </div> -->
+                        
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
-                            <!-- <a class="nav-item nav-link btn btn-primary py-2 px-4 ml-auto login-btn"
-                                href="login.html">Login</a> -->
-                            <!-- <button class="nav-item nav-link btn btn-primary py-2 px-4 ml-auto login-btn"
-                                id="logout">Logout</button>
-                                <p> <span id="loggedUserFName"></span> </p>
-                              <p>   <span id="loggedUserLName"></span> </p>
-                             <p>  <span id="loggedUserEmail"></span> </p> -->
+                           
+                             <a class="userName"> <i class="fa fa-user"></i> <span id="userName"></span></a>
+    <li id="logoutBtn">Logout</li>
                                 
                         </div>
                     </div>
@@ -107,6 +96,18 @@
     <style>
         .top-header {
             background-color: #e5fbff;
+        }
+        .userName{
+            padding: 20px 15px;
+        }
+        .navbar-nav #logoutBtn {
+            /* padding: 6px 8px !important; */
+            /* background-color: var(--first); */
+            cursor: pointer;
+            padding: 22px 15px;
+            background-color: var(--first);
+            color: white;
+            border-radius: 4rem;
         }
     </style>
     <!-- Carousel Start -->
@@ -458,7 +459,6 @@
         </div>
     </div>
 
-   
 
     <div class="container-fluid mt-2 bg-second pd-inline">
         <div class="col-12">
@@ -594,10 +594,79 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script>
-        
+    <script type="module">
+        // Import Firebase SDK and necessary modules
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+        import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCN6m0tDyKjGHZZ6jydq8BJ_NRtGqQW5m0",
+            authDomain: "edu-sraddha.firebaseapp.com",
+            databaseURL: "https://edu-sraddha-default-rtdb.firebaseio.com",
+            projectId: "edu-sraddha",
+            storageBucket: "edu-sraddha.appspot.com",
+            messagingSenderId: "724188304454",
+            appId: "1:724188304454:web:e0a1c43c8c929921a8a647"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const db = getFirestore();
+
+        // Function to display messages
+        function showMessage(message) {
+            const messageDiv = document.getElementById('userMessage');
+            messageDiv.style.display = "block";
+            messageDiv.innerText = message;
+            setTimeout(() => {
+                messageDiv.style.display = "none";
+            }, 5000);
+        }
+
+        // Function to fetch and display user info
+        function displayUserInfo(user) {
+            const userName = document.getElementById('userName');
+            const userEmail = document.getElementById('userEmail');
+            
+            // Fetch user document from Firestore
+            const docRef = doc(db, "users", user.uid);
+            getDoc(docRef).then((docSnap) => {
+                if (docSnap.exists()) {
+                    const userData = docSnap.data();
+                    userName.textContent = `${userData.firstName} ${userData.lastName}`;
+                    userEmail.textContent = userData.email;
+                } else {
+                    console.log("No such document!");
+                }
+            }).catch((error) => {
+                console.error("Error fetching user data:", error);
+            });
+        }
+
+        // Check if user is logged in
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                displayUserInfo(user);
+            } else {
+                // Redirect to login page if not logged in
+                window.location.href = 'signup.html';
+            }
+        });
+
+        // Logout functionality
+        const logoutBtn = document.getElementById('logoutBtn');
+        logoutBtn.addEventListener('click', () => {
+            signOut(auth).then(() => {
+                showMessage("Logged out successfully.");
+                window.location.href = 'signup.html';
+            }).catch((error) => {
+                console.error("Error during logout:", error);
+            });
+        });
     </script>
-    <!-- <script src="homepage.js"></script> -->
 </body>
 
 </html>
