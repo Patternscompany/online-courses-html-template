@@ -6372,7 +6372,7 @@ button.bg-primary:focus {
 a.bg-secondary:hover, a.bg-secondary:focus,
 button.bg-secondary:hover,
 button.bg-secondary:focus {
-  background-color: #d2cfe7 !important;
+  /* background-color: #d2cfe7 !important; */
 }
 
 .bg-success {
@@ -10022,6 +10022,8 @@ h6,
 
 .upskill-container img{
   height: 100vh;
+  object-fit: cover;
+  border-radius: 15px;
 }
 .text-first{
   color: var(--first);
