@@ -129,11 +129,11 @@
     </div>
     <!-- Navbar End -->
 
-    <style>
-        .top-header {
-            background-color: #e5fbff;
-        }
-    </style>
+<style>
+    .top-header {
+        background-color: #e5fbff;
+    }
+</style>
     <!-- Carousel Start -->
     <div class="container p-0 pb-5 mb-5 navbar-bg" style="max-width: 100%;">
         <!-- <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -183,7 +183,7 @@
                 <div class="left-bg">
 
                
-                <img src="img/urgent-img/2.png" alt="shape" class="w-100  position-relative" />
+                <!-- <img src="img/urgent-img/2.png" alt="shape" class="w-100  position-relative" /> -->
                 <div class="header-content-container position-absolute">
                     <div>
                         <p>SUPRA PERITUM CO.</p>
@@ -206,7 +206,12 @@
 <style>
     .navbar-bg{
         /* height: 100vh; */
+        background: url(./img/hero-desk2.png);
+        background-position: center center;
+        background-size: cover;
+        height: 100vh;
     }
+   
     .navbar-bg .col-lg-6{
         /* height: 100vh; */
     }
@@ -232,7 +237,8 @@
     }
     .navbar-bg .left-bg .header-content-container{
         position: absolute;
-        top: 20%;
+        top:30%;
+        left: 10%;
         padding: 2rem;
     }
     .navbar-bg .left-bg .header-content-container p{
@@ -242,6 +248,28 @@
     .navbar-bg .left-bg .header-content-container h2{
         color: white;
         font-size: 4rem;
+    }
+    @media(max-width:992px){
+        .navbar-bg{
+            background: url(./img/hero-mobile.png);
+            background-position: center center;
+        background-size: cover;
+        height: 100vh;
+        }
+        .navbar-bg .header-content-container{
+            display: none;
+        }
+    }
+    @media(max-width:756px){
+        .navbar-bg{
+            background: url(./img/hero-mobile3.png);
+            background-position: center center;
+        background-size: cover;
+        height: 100vh;
+        }
+        .navbar-bg .header-content-container{
+            display: block;
+        }
     }
 </style>
 
@@ -474,7 +502,7 @@
                         colors to align with your mission. Lastly, finalize your template so that it’s ready to
                         use anytime.
                     </p>
-                    <h2 class="lifelong-heading">
+                    <h2>
                         "Lifelong learning is critical to success. We
                         upskill to get better at what we do."
 
@@ -482,36 +510,6 @@
                 </div>
                 <div class="col-lg-6">
                     <img src="img/urgent-img/7.1.png" alt="upskill img" class="w-100">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid py-5 bg-second mt-2">
-        <div class="container">
-            <div class="row upskill-container">
-                <div class="col-lg-6">
-                    <img src="img/urgent-img/8.png" alt="upskill img" class="w-100">
-                </div>
-                <div class="col-lg-6 p-4 bg-first rounded">
-                    <h2 class="text-white upskill-heading pb-3">New Learning Sessions</h2>
-                    <h3 class="session-sub-heading">EFFECTIVE LEADERSHIP</h3>
-                    <p class="text-white pb-5">
-                        Learn how to become a better, more compassionate and ultimately
-                        more effective leader in this hour-long session with esteemed Life
-                        Coach, Daniel Gallego.
-
-                    </p>
-
-                    <h3 class="session-sub-heading">COMMUNICATING WITH CONFIDENCE</h3>
-                    <p class="text-white pb-5">
-                        A panel of experts in communication and psychology gives their tips
-                        and tricks for conveying your messages confidently and effectively
-                    </p>
-                    <h3 class="session-sub-heading">RALLYING TEAMS</h3>
-                    <p class="text-white">
-                        Collaboration is key to the success of projects. Learn how to
-                        leverage on a team's skills and rally them towards achieving goals.
-                    </p>
                 </div>
             </div>
         </div>
@@ -644,80 +642,6 @@
     </div> -->
     <!-- Courses End -->
 
-    <div class="bg-second mt-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 pt-3">
-                    <h3 class="link-heading text-first text-center">
-                        Useful Links
-                    </h3>
-                </div>
-                <div class="col-lg-6 ">
-                    <div class="card-item bg-first d-flex p-3 rounded">
-                        <img src="/img/urgent-img/9.png" alt="card" class="mr-3">
-                        <div class="d-flex flex-column justify-content-between">
-                            <h4>UPCOMING EVENTS
-                                FOR OCTOBER
-                            </h4>
-                            <p class="text-uppercase text-second">Read More</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="card-item bg-first d-flex p-3 rounded">
-                        <img src="/img/urgent-img/10.png" alt="card" class="mr-3">
-                        <div class="d-flex flex-column justify-content-between">
-                            <h4>SHORT COURSES
-                            </h4>
-                            <p class="text-uppercase text-second">Read More</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="my-3 card-item bg-first d-flex p-3 rounded">
-                        <img src="/img/urgent-img/11.png" alt="card" class="mr-3">
-                        <div class="d-flex flex-column justify-content-between">
-                            <h4>LESSON RECORDINGS
-                            </h4>
-                            <p class="text-uppercase text-second">Read More</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="my-3 card-item bg-first d-flex p-3 rounded">
-                        <img src="/img/urgent-img/12.png" alt="card" class="mr-3">
-                        <div class="d-flex flex-column justify-content-between">
-                            <h4>
-                                FITNESS WORKSHOPS
-                            </h4>
-                            <p class="text-uppercase text-second">Read More</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="my-3 card-item bg-first d-flex p-3 rounded">
-                        <img src="/img/urgent-img/13.png" alt="card" class="mr-3">
-                        <div class="d-flex flex-column justify-content-between">
-                            <h4>TEAM CELEBRATIONS
-                            </h4>
-                            <p class="text-uppercase text-second">Read More</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="my-3 card-item bg-first d-flex p-3 rounded">
-                        <img src="/img/urgent-img/14.png" alt="card" class="mr-3">
-                        <div class="d-flex flex-column justify-content-between">
-                            <h4>OTHER OFFICE
-                                ACTIVITIES                                
-                            </h4>
-                            <p class="text-uppercase text-second">Read More</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Registration Start -->
     <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
