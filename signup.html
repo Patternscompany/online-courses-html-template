@@ -77,43 +77,15 @@
   <div class="wrapper">
     <h1>Signup</h1>
     <p id="error-message"></p>
-    <form id="userForm">
-      <div>
-        <label for="firstname-input">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/></svg>
-        </label>
-        <input type="text"  id="full_name" placeholder="Firstname">
-      </div>
-      <div>
-        <!-- <label for="email-input">
-          <span>@</span>
-        </label> -->
-        <input type="email"  id="email" placeholder="Email">
-      </div>
-      <div>
-        <!-- <label for="password-input">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm240-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z"/></svg>
-        </label> -->
-        <input type="password" id="password" placeholder="Password">
-      </div>
-      <div>
-        <!-- <label for="repeat-password-input">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm240-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z"/></svg>
-        </label> -->
-        <input type="text"  id="favourite_song" placeholder="favourite_song">
-      </div>
-      <div>
-        <!-- <label for="repeat-password-input">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm240-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z"/></svg>
-        </label> -->
-        <input type="text"  id="milk_before_cereal" placeholder="milk_before_cereal">
-      </div>
-    <!-- <a href="index.html">  <button type="submit"  onclick="login()">Signup</button></a>
-    </form>
-    <p>Already have an Account? <a href="login.html" >login</a> </p> -->
-    <button onclic="login()">Login</button>
-    <button onClick="register()">Register</button>
-   </form>
+    <h2 class="form-title">Sign Up</h2>
+            <form id="signup-form" action="/signup" method="POST">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email"   
+ name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>   
+
+                <button type="submit">Sign Up</button>
+            </form>
   </div>
   <!-- <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js"></script>
@@ -124,114 +96,5 @@
 
 </body>
 <!-- Load Firebase SDKs as modules -->
-<script type="module">
-  // Import Firebase modules
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
-  import { getDatabase, ref, set, update } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyCN6m0tDyKjGHZZ6jydq8BJ_NRtGqQW5m0",
-    authDomain: "edu-sraddha.firebaseapp.com",
-    databaseURL: "https://edu-sraddha-default-rtdb.firebaseio.com",
-    projectId: "edu-sraddha",
-    storageBucket: "edu-sraddha.appspot.com",
-    messagingSenderId: "724188304454",
-    appId: "1:724188304454:web:e0a1c43c8c929921a8a647"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-  const database = getDatabase(app);
-
-  // Register function
-  function register() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const full_name = document.getElementById('full_name').value;
-    const favourite_song = document.getElementById('favourite_song').value;
-    const milk_before_cereal = document.getElementById('milk_before_cereal').value;
-
-    // Validate input fields
-    if (!validate_email(email) || !validate_password(password)) {
-      alert('Email or Password is incorrect!');
-      return;
-    }
-    if (!validate_field(full_name) || !validate_field(favourite_song) || !validate_field(milk_before_cereal)) {
-      alert('One or more fields are empty!');
-      return;
-    }
-
-    // Register the user
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        const database_ref = ref(database, 'users/' + user.uid);
-
-        // Create user data
-        const user_data = {
-          email: email,
-          full_name: full_name,
-          favourite_song: favourite_song,
-          milk_before_cereal: milk_before_cereal,
-          last_login: Date.now()
-        };
-
-        // Push to Firebase Database
-        set(database_ref, user_data)
-          .then(() => alert('User Created!'))
-          .catch(error => alert("Error writing data to database: " + error.message));
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
-  }
-
-  // Login function
-  function login() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-
-    // Validate input fields
-    if (!validate_email(email) || !validate_password(password)) {
-      alert('Email or Password is incorrect!');
-      return;
-    }
-
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        const database_ref = ref(database, 'users/' + user.uid);
-
-        // Update last login
-        const user_data = {
-          last_login: Date.now()
-        };
-
-        // Update Firebase Database
-        update(database_ref, user_data)
-          .then(() => alert('User Logged In!'))
-          .catch(error => alert("Error updating data: " + error.message));
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
-  }
-
-  // Validation functions
-  function validate_email(email) {
-    const expression = /^[^@]+@\w+(\.\w+)+\w$/;
-    return expression.test(email);
-  }
-
-  function validate_password(password) {
-    return password.length >= 6;
-  }
-
-  function validate_field(field) {
-    return field != null && field.trim().length > 0;
-  }
-</script>
 </html>
