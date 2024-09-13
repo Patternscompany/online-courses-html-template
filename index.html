@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
@@ -67,7 +68,7 @@
 
 
     <!-- Navbar Start -->
-    <div class="container-fluid">
+    <div class="container-fluid top-header">
         <div class="row border-top px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
                 <a class="d-flex align-items-center justify-content-between bg-secondary w-100 text-decoration-none"
@@ -107,7 +108,7 @@
                         <div class="navbar-nav py-0">
                             <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="course.html" class="nav-item nav-link">Achievements</a>
+                            <a href="achievements.html" class="nav-item nav-link">Achievements</a>
                             <!-- <a href="teacher.html" class="nav-item nav-link">Teachers</a> -->
                             <!-- <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
@@ -117,8 +118,8 @@
                                 </div>
                             </div> -->
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
-                            <a class="nav-item nav-link btn btn-primary py-2 px-4 ml-auto login-btn"
-                                href="login.html">Login</a>
+                            <!-- <a class="nav-item nav-link btn btn-primary py-2 px-4 ml-auto login-btn"
+                                href="login.html">Login</a> -->
                             <a class="nav-item nav-link btn btn-primary py-2 px-4 ml-auto login-btn"
                                 href="signup.html">Sign Up</a>
                         </div>
@@ -129,9 +130,13 @@
     </div>
     <!-- Navbar End -->
 
-
+    <style>
+        .top-header {
+            background-color: #e5fbff;
+        }
+    </style>
     <!-- Carousel Start -->
-    <div class="container p-0 pb-5 mb-5 navbar-bg">
+    <div class="container p-0 pb-5 mb-5 navbar-bg" style="max-width: 100%;">
         <!-- <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
@@ -175,23 +180,81 @@
             </div>
         </div> -->
         <div class="row pt-2">
-            <div class="col-lg-7">
-                <img src="img/urgent-img/2.png" alt="shape" class="w-100 position-relative" />
-                <div class="header-content-container position-absolute">
-                    <div>
-                        <h2>
-                            Edu Shraddha Tutorials
-                        </h2>
+            <div class="col-lg-6 ">
+                <div class="left-bg">
+
+
+                    <img src="img/urgent-img/2.png" alt="shape" class="w-100  position-relative" />
+                    <div class="header-content-container position-absolute">
+                        <div>
+                            <p>SUPRA PERITUM CO.</p>
+                            <h2>
+                                Learning Hub
+                            </h2>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5">
-                <img src="/img/hero-bg-img1.png" alt="hero bg" class="w-100" />
+            <div class="col-lg-6">
+                <div class="right-bg">
+                    <img src="./img/bg-hero.png" alt="hero bg" class="w-100" />
+
+                </div>
             </div>
         </div>
     </div>
     <!-- Carousel End -->
+    <style>
+        .navbar-bg {
+            /* height: 100vh; */
+        }
 
+        .navbar-bg .col-lg-6 {
+            /* height: 100vh; */
+        }
+
+        .navbar-bg .left-bg {
+            height: 100vh !important;
+        }
+
+        .navbar-bg .left-bg img {
+            height: 100%;
+        }
+
+        .navbar-bg .col-lg-6 img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .navbar-bg .right-bg {
+            height: 100vh;
+        }
+
+        .navbar-bg .right-bg img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .navbar-bg .left-bg {
+            position: relative;
+        }
+
+        .navbar-bg .left-bg .header-content-container {
+            position: absolute;
+            top: 20%;
+            padding: 2rem;
+        }
+
+        .navbar-bg .left-bg .header-content-container p {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .navbar-bg .left-bg .header-content-container h2 {
+            color: white;
+            font-size: 4rem;
+        }
+    </style>
 
     <!-- About Start -->
     <!-- <div class="container-fluid py-5">
@@ -220,7 +283,7 @@
 
     <!--Directory-->
 
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-5 bg-second">
         <div class="container py-5">
             <div class="text-center mb-5">
                 <!-- <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Courses</h5> -->
@@ -422,7 +485,7 @@
                         colors to align with your mission. Lastly, finalize your template so that it’s ready to
                         use anytime.
                     </p>
-                    <h2>
+                    <h2 class="lifelong-heading">
                         "Lifelong learning is critical to success. We
                         upskill to get better at what we do."
 
@@ -430,6 +493,36 @@
                 </div>
                 <div class="col-lg-6">
                     <img src="img/urgent-img/7.1.png" alt="upskill img" class="w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-5 bg-second mt-2">
+        <div class="container">
+            <div class="row upskill-container">
+                <div class="col-lg-6">
+                    <img src="img/urgent-img/8.png" alt="upskill img" class="w-100">
+                </div>
+                <div class="col-lg-6 p-4 bg-first rounded">
+                    <h2 class="text-white upskill-heading pb-3">New Learning Sessions</h2>
+                    <h3 class="session-sub-heading">EFFECTIVE LEADERSHIP</h3>
+                    <p class="text-white pb-5">
+                        Learn how to become a better, more compassionate and ultimately
+                        more effective leader in this hour-long session with esteemed Life
+                        Coach, Daniel Gallego.
+
+                    </p>
+
+                    <h3 class="session-sub-heading">COMMUNICATING WITH CONFIDENCE</h3>
+                    <p class="text-white pb-5">
+                        A panel of experts in communication and psychology gives their tips
+                        and tricks for conveying your messages confidently and effectively
+                    </p>
+                    <h3 class="session-sub-heading">RALLYING TEAMS</h3>
+                    <p class="text-white">
+                        Collaboration is key to the success of projects. Learn how to
+                        leverage on a team's skills and rally them towards achieving goals.
+                    </p>
                 </div>
             </div>
         </div>
@@ -562,9 +655,83 @@
     </div> -->
     <!-- Courses End -->
 
+    <div class="bg-second mt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 pt-3">
+                    <h3 class="link-heading text-first text-center">
+                        Useful Links
+                    </h3>
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="card-item bg-first d-flex p-3 rounded">
+                        <img src="/img/urgent-img/9.png" alt="card" class="mr-3">
+                        <div class="d-flex flex-column justify-content-between">
+                            <h4>UPCOMING EVENTS
+                                FOR OCTOBER
+                            </h4>
+                            <p class="text-uppercase text-second">Read More</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-item bg-first d-flex p-3 rounded">
+                        <img src="/img/urgent-img/10.png" alt="card" class="mr-3">
+                        <div class="d-flex flex-column justify-content-between">
+                            <h4>SHORT COURSES
+                            </h4>
+                            <p class="text-uppercase text-second">Read More</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="my-3 card-item bg-first d-flex p-3 rounded">
+                        <img src="/img/urgent-img/11.png" alt="card" class="mr-3">
+                        <div class="d-flex flex-column justify-content-between">
+                            <h4>LESSON RECORDINGS
+                            </h4>
+                            <p class="text-uppercase text-second">Read More</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="my-3 card-item bg-first d-flex p-3 rounded">
+                        <img src="/img/urgent-img/12.png" alt="card" class="mr-3">
+                        <div class="d-flex flex-column justify-content-between">
+                            <h4>
+                                FITNESS WORKSHOPS
+                            </h4>
+                            <p class="text-uppercase text-second">Read More</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="my-3 card-item bg-first d-flex p-3 rounded">
+                        <img src="/img/urgent-img/13.png" alt="card" class="mr-3">
+                        <div class="d-flex flex-column justify-content-between">
+                            <h4>TEAM CELEBRATIONS
+                            </h4>
+                            <p class="text-uppercase text-second">Read More</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="my-3 card-item bg-first d-flex p-3 rounded">
+                        <img src="/img/urgent-img/14.png" alt="card" class="mr-3">
+                        <div class="d-flex flex-column justify-content-between">
+                            <h4>OTHER OFFICE
+                                ACTIVITIES                                
+                            </h4>
+                            <p class="text-uppercase text-second">Read More</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Registration Start -->
-    <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
+    <!-- <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-7 mb-5 mb-lg-0">
@@ -617,12 +784,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Registration End -->
 
 
     <!-- Team Start -->
-    <div class="container-fluid py-5">
+    <!-- <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="text-center mb-5">
                 <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Teachers</h5>
@@ -707,12 +874,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Team End -->
 
 
     <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
+    <!-- <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="text-center mb-5">
                 <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Testimonial</h5>
@@ -752,12 +919,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Testimonial End -->
 
 
     <!-- Blog Start -->
-    <div class="container-fluid py-5">
+    <!-- <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <div class="text-center mb-5">
                 <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Our Blog</h5>
@@ -796,20 +963,28 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Blog End -->
 
+    <div class="container-fluid mt-2 bg-second">
+        <div class="col-12">
+            <img src="img/urgent-img/15.png" alt="" class="w-100 position-relative">
+            <h3 class="position-absolute text-white" style="top: 10%;left: 10%;">
+                SUPRA PERITUM CO.
+            </h3>
+        </div>
+    </div>
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+    <div class="container-fluid bg-third text-white py-5 px-sm-3 px-lg-5">
         <div class="row pt-5">
             <div class="col-lg-7 col-md-12">
                 <div class="row">
                     <div class="col-md-6 mb-5">
                         <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get In Touch</h5>
-                        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>Krishna Apt Shop No.12 | Sector 8, Kamote Navi Mumbai</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>8108129531</p>
+                        <!-- <p><i class="fa fa-envelope mr-2"></i>info@example.com</p> -->
                         <div class="d-flex justify-content-start mt-4">
                             <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-square mr-2" href="#"><i
@@ -851,8 +1026,8 @@
         style="border-color: rgba(256, 256, 256, .1) !important;">
         <div class="row">
             <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white">&copy; <a href="#">Domain Name</a>. All Rights Reserved. Designed by <a
-                        href="https://htmlcodex.com">HTML Codex</a>
+                <p class="m-0 text-white">&copy; <a href="#">Edu Shraddha Tutorials</a>. All Rights Reserved. Designed by <a
+                        href="#">Edu Shraddha Tutorials</a>
                 </p>
             </div>
             <div class="col-lg-6 text-center text-md-right">
@@ -878,6 +1053,9 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    
+    <!--Whatsapp-->
+    <a href="https://wa.me/+918108129531" target="_blank" class="btn btn-lg btn-primary btn-lg-square whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
 
 
     <!-- JavaScript Libraries -->

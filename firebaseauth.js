@@ -1,19 +1,18 @@
- // Import the functions you need from the SDKs you need
+//Import the functions you need from the SDKs you need
  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
  import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
  import{getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
  
  const firebaseConfig = {
- //YOUR COPIED FIREBASE PART SHOULD BE HERE
- //WATCH THIS VIDEO TO LEARN WHAT TO PUT HERE   https://youtu.be/_Xczf06n6x0
- apiKey: "AIzaSyCN6m0tDyKjGHZZ6jydq8BJ_NRtGqQW5m0",
- authDomain: "edu-sraddha.firebaseapp.com",
- databaseURL: "https://edu-sraddha-default-rtdb.firebaseio.com",
- projectId: "edu-sraddha",
- storageBucket: "edu-sraddha.appspot.com",
- messagingSenderId: "724188304454",
- appId: "1:724188304454:web:e0a1c43c8c929921a8a647"
- };
+    apiKey: "AIzaSyCN6m0tDyKjGHZZ6jydq8BJ_NRtGqQW5m0",
+    authDomain: "edu-sraddha.firebaseapp.com",
+    databaseURL: "https://edu-sraddha-default-rtdb.firebaseio.com",
+    projectId: "edu-sraddha",
+    storageBucket: "edu-sraddha.appspot.com",
+    messagingSenderId: "724188304454",
+    appId: "1:724188304454:web:e0a1c43c8c929921a8a647"
+  };
+
 
  // Initialize Firebase
  const app = initializeApp(firebaseConfig);
@@ -80,7 +79,7 @@
         showMessage('login is successful', 'signInMessage');
         const user=userCredential.user;
         localStorage.setItem('loggedInUserId', user.uid);
-        window.location.href='homepage.html';
+        window.location.href='index.html';
     })
     .catch((error)=>{
         const errorCode=error.code;

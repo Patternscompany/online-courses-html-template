@@ -1,137 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Signup</title>
-  <link rel="stylesheet" href="style1.css">
-  <link href="css/style.css" rel="stylesheet">
-  <!-- <script type="text/javascript" src="validation.js" defer></script> -->
- <!-- <script type="module" src="fire.js"></script> -->
-</head>
-<body>
-  
-    <!-- Navbar Start -->
-    <div class="container-fluid ">
-      <div class="row border-top px-xl-5 background-na">
-          <div class="col-lg-3 d-none d-lg-block">
-              <a class="d-flex align-items-center justify-content-between bg-secondar w-100 text-decoration-none"
-                  data-toggle="collapse" href="#navbar-vertical" style="height: 67px; padding: 0 30px;">
-                  <!-- <h5 class="text-primary m-0"><i class="fa fa-book-open mr-2"></i>Subjects</h5>
-                  <i class="fa fa-angle-down text-primary"></i> -->
-                  <img src="img/Edu-tech-logo.jpeg" class="w-100">
-              </a>
-              <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light"
-                  id="navbar-vertical" style="width: calc(100% - 30px); z-index: 9;">
-                  <div class="navbar-nav w-100">
-                      <div class="nav-item dropdown">
-                          <a href="#" class="nav-link" data-toggle="dropdown">Web Design <i
-                                  class="fa fa-angle-down float-right mt-1"></i></a>
-                          <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
-                              <a href="" class="dropdown-item">HTML</a>
-                              <a href="" class="dropdown-item">CSS</a>
-                              <a href="" class="dropdown-item">jQuery</a>
-                          </div>
-                      </div>
-                      <a href="" class="nav-item nav-link">Apps Design</a>
-                      <a href="" class="nav-item nav-link">Marketing</a>
-                      <a href="" class="nav-item nav-link">Research</a>
-                      <a href="" class="nav-item nav-link">SEO</a>
-                  </div>
-              </nav>
-          </div>
-          <div class="col-lg-9">
-              <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-                  <a href="" class="text-decoration-none d-block d-lg-none">
-                      <h1 class="m-0"><span class="text-primary">E</span>COURSES</h1>
-                  </a>
-                  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                      <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
-                      <div class="navbar-nav py-0">
-                          <a href="index.html" class="nav-item nav-link active">Home</a>
-                          <a href="about.html" class="nav-item nav-link">About</a>
-                          <a href="achievements.html" class="nav-item nav-link">Achievements</a>
-                          <!-- <a href="teacher.html" class="nav-item nav-link">Teachers</a> -->
-                          <!-- <div class="nav-item dropdown">
-                              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
-                              <div class="dropdown-menu rounded-0 m-0">
-                                  <a href="blog.html" class="dropdown-item">Blog List</a>
-                                  <a href="single.html" class="dropdown-item">Blog Detail</a>
-                              </div>
-                          </div> -->
-                          <a href="contact.html" class="nav-item nav-link">Contact</a>
-                          <a class="nav-item nav-link btn btn-primary py-2 px-4 ml-auto login-btn"
-                              href="login.html">Login</a>
-                              <a class="nav-item nav-link btn btn-primary py-2 px-4 ml-auto login-btn"
-                                href="signup.html">Sign Up</a>
-                      </div>
-                  </div>
-              </nav>
-          </div>
-      </div>
-  </div>
-  <!-- Navbar End -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="firebaseauth.js"></script>
 
-  <div class="wrapper">
-    <h1>Signup</h1>
-    <p id="error-message"></p>
-    <form id="userForm">
-      <div>
-        <label for="firstname-input">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/></svg>
-        </label>
-        <input type="text"  id="full_name" placeholder="Firstname">
-      </div>
-      <div>
-        <!-- <label for="email-input">
-          <span>@</span>
-        </label> -->
-        <input type="email"  id="email" placeholder="Email">
-      </div>
-      <div>
-        <!-- <label for="password-input">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm240-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z"/></svg>
-        </label> -->
-        <input type="password" id="password" placeholder="Password">
-      </div>
-      <div>
-        <!-- <label for="repeat-password-input">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm240-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z"/></svg>
-        </label> -->
-        <input type="text"  id="favourite_song" placeholder="favourite_song">
-      </div>
-      <div>
-        <!-- <label for="repeat-password-input">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm240-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z"/></svg>
-        </label> -->
-        <input type="text"  id="milk_before_cereal" placeholder="milk_before_cereal">
-      </div>
-    <!-- <a href="index.html">  <button type="submit"  onclick="login()">Signup</button></a>
-    </form>
-    <p>Already have an Account? <a href="login.html" >login</a> </p> -->
-    <button onclic="login()">Login</button>
-    <button onClick="register()">Register</button>
-   </form>
-  </div>
-  <!-- <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js"></script> -->
-  
-<!-- <script src="index.js"></script> -->
-
-
-</body>
-<!-- Load Firebase SDKs as modules -->
-<script type="module">
-  // Import Firebase modules
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
-  import { getDatabase, ref, set, update } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js";
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
+    <script type="module" src="">// Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+   const firebaseConfig = {
     apiKey: "AIzaSyCN6m0tDyKjGHZZ6jydq8BJ_NRtGqQW5m0",
     authDomain: "edu-sraddha.firebaseapp.com",
     databaseURL: "https://edu-sraddha-default-rtdb.firebaseio.com",
@@ -141,97 +24,236 @@
     appId: "1:724188304454:web:e0a1c43c8c929921a8a647"
   };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-  const database = getDatabase(app);
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);</script>
+</head>
+<body>
+    <div class="container" id="signup" style="display:none;">
+      <h1 class="form-title">Register</h1>
+      <form method="post" action="">
+        <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+        <div class="input-group">
+           <i class="fas fa-user"></i>
+           <input type="text"  id="fName" placeholder="First Name" required>
+           <!-- <label for="fname">First Name</label> -->
+        </div>
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text"  id="lName" placeholder="Last Name" required>
+            <!-- <label for="lName">Last Name</label> -->
+        </div>
+        <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email"  id="rEmail" placeholder="Email" required>
+            <!-- <label for="rEmail">Email</label> -->
+        </div>
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="rPassword"  placeholder="Password" required>
+            <!-- <label for="rPassword">Password</label> -->
+        </div>
+       <button class="btn" id="submitSignUp" >Sign Up</button>
+      </form>
+      <p class="or">
+        ----------or--------
+      </p>
+      <div class="icons">
+        <i class="fab fa-google"></i>
+        <i class="fab fa-facebook"></i>
+      </div>
+      <div class="links">
+        <p>Already Have Account ?</p>
+        <button id="signInButton">Sign In</button>
+      </div>
+    </div>
 
-  // Register function
-  function register() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const full_name = document.getElementById('full_name').value;
-    const favourite_song = document.getElementById('favourite_song').value;
-    const milk_before_cereal = document.getElementById('milk_before_cereal').value;
+  <div class="container" id="signIn">
+        <h1 class="form-title">Sign In</h1>
+        <form method="post" action="">
+          <div id="signInMessage" class="messageDiv" style="display:none;"></div>
 
-    // Validate input fields
-    if (!validate_email(email) || !validate_password(password)) {
-      alert('Email or Password is incorrect!');
-      return;
-    }
-    if (!validate_field(full_name) || !validate_field(favourite_song) || !validate_field(milk_before_cereal)) {
-      alert('One or more fields are empty!');
-      return;
-    }
+          <div class="input-group">
+              <i class="fas fa-envelope"></i>
+              <input type="email"  id="email" placeholder="Email" required>
+              <!-- <label for="email">Email</label> -->
+          </div>
+          <div class="input-group">
+              <i class="fas fa-lock"></i>
+            <input type="password" id="password"  placeholder="Password" required>
+              <!-- <label for="password">Password</label> -->
+          </div>
+          <p class="recover">
+            <a href="#">Recover Password</a>
+          </p>
+         <button  class="btn"  id="submitSignIn">Sign In</button>
+        </form>
+        <p class="or">
+          ----------or--------
+        </p>
+        <div class="icons">
+          <i class="fab fa-google"></i>
+          <i class="fab fa-facebook"></i>
+        </div>
+        <div class="links">
+          <p>Don't have account yet?</p>
+          <button id="signUpButton">Sign Up</button>
+        </div>
+      </div>
+      <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"poppins",sans-serif;
+}
+body{
+    background-color: #c9d6ff;
+    background:linear-gradient(to right,#e2e2e2,#c9d6ff);
+}
+.container{
+    background:#fff;
+    width:450px;
+    padding:1.5rem;
+    margin:50px auto;
+    border-radius:10px;
+    box-shadow:0 20px 35px rgba(0,0,1,0.9);
+}
+form{
+    margin:0 2rem;
+}
+.form-title{
+    font-size:1.5rem;
+    font-weight:bold;
+    text-align:center;
+    padding:1.3rem;
+    margin-bottom:0.4rem;
+}
+input{
+    color:inherit;
+    width:100%;
+    background-color:transparent;
+    border:none;
+    border-bottom:1px solid #757575;
+    padding-left:1.5rem;
+    font-size:15px;
+}
+.input-group{
+    padding:5% 0;
+    position:relative;
 
-    // Register the user
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        const database_ref = ref(database, 'users/' + user.uid);
+}
+.input-group i{
+    position:absolute;
+    color:black;
+}
+/* input:focus{
+    background-color: transparent;
+    outline:transparent;
+    border-bottom:2px solid hsl(327,90%,28%);
+}
+input::placeholder{
+    color:transparent;
+} */
+ input:focus{
+border: 0;
+outline: 0;
+ }
+label{
+    color:#757575;
+    position:relative;
+    left:1.2em;
+    top:-1.3em;
+    cursor:auto;
+    transition:0.3s ease all;
+}
+input:focus~label,input:not(:placeholder-shown)~label{
+    top:-3em;
+    color:hsl(327,90%,28%);
+    font-size:15px;
+}
+.recover{
+    text-align:right;
+    font-size:1rem;
+    margin-bottom:1rem;
 
-        // Create user data
-        const user_data = {
-          email: email,
-          full_name: full_name,
-          favourite_song: favourite_song,
-          milk_before_cereal: milk_before_cereal,
-          last_login: Date.now()
-        };
+}
+.recover a{
+    text-decoration:none;
+    color:rgb(125,125,235);
+}
+.recover a:hover{
+    color:blue;
+    text-decoration:underline;
+}
+button{
+    font-size:1.1rem;
+    padding:8px 0;
+    border-radius:5px;
+    outline:none;
+    border:none;
+    width:100%;
+    background:rgb(125,125,235);
+    color:white;
+    cursor:pointer;
+    transition:0.9s;
+}
+button:hover{
+    background:#07001f;
+}
+.or{
+    font-size:1.1rem;
+    margin-top:0.5rem;
+    text-align:center;
+}
+.icons{
+    text-align:center;
+}
+.icons i{
+    color:rgb(125,125,235);
+    padding:0.8rem 1.5rem;
+    border-radius:10px;
+    font-size:1.5rem;
+    cursor:pointer;
+    border:2px solid #dfe9f5;
+    margin:0 15px;
+    transition:1s;
+}
+.icons i:hover{
+    background:#07001f;
+    font-size:1.6rem;
+    border:2px solid rgb(125,125,235);
+}
+.links{
+    display:flex;
+    justify-content:space-around;
+    padding:0 4rem;
+    margin-top:0.9rem;
+    font-weight:bold;
+}
+ #signUpButton, #signInButton{
+    color:rgb(125,125,235);
+    border:none;
+    background-color:transparent;
+    font-size:1rem;
+    font-weight:bold;
+}
+#signUpButton:hover, #signInButton:hover {
+    text-decoration:underline;
+    color:blue;
+} 
+.messageDiv{
+    background-color:hsl(327,90%,28%);
+    color:white;
+    padding:10px 20px;
+    margin:10px;
+    border-radius: 5px;
+    font-size:1rem;
+    opacity:0;
+    animation:fadeOut 7s forwards;
 
-        // Push to Firebase Database
-        set(database_ref, user_data)
-          .then(() => alert('User Created!'))
-          .catch(error => alert("Error writing data to database: " + error.message));
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
-  }
-
-  // Login function
-  function login() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-
-    // Validate input fields
-    if (!validate_email(email) || !validate_password(password)) {
-      alert('Email or Password is incorrect!');
-      return;
-    }
-
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        const database_ref = ref(database, 'users/' + user.uid);
-
-        // Update last login
-        const user_data = {
-          last_login: Date.now()
-        };
-
-        // Update Firebase Database
-        update(database_ref, user_data)
-          .then(() => alert('User Logged In!'))
-          .catch(error => alert("Error updating data: " + error.message));
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
-  }
-
-  // Validation functions
-  function validate_email(email) {
-    const expression = /^[^@]+@\w+(\.\w+)+\w$/;
-    return expression.test(email);
-  }
-
-  function validate_password(password) {
-    return password.length >= 6;
-  }
-
-  function validate_field(field) {
-    return field != null && field.trim().length > 0;
-  }
-</script>
+}
+      </style>
+      <script src="script.js"></script>
+</body>
 </html>
