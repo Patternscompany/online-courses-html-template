@@ -211,14 +211,7 @@
         background-size: cover;
         height: 100vh;
     }
-    @media(max-width:992px){
-        .navbar-bg{
-            background: url(./img/hero-mobile.png);
-            background-position: center center;
-        background-size: cover;
-        height: 100vh;
-        }
-    }
+   
     .navbar-bg .col-lg-6{
         /* height: 100vh; */
     }
@@ -255,6 +248,28 @@
     .navbar-bg .left-bg .header-content-container h2{
         color: white;
         font-size: 4rem;
+    }
+    @media(max-width:992px){
+        .navbar-bg{
+            background: url(./img/hero-mobile.png);
+            background-position: center center;
+        background-size: cover;
+        height: 100vh;
+        }
+        .navbar-bg .header-content-container{
+            display: none;
+        }
+    }
+    @media(max-width:756px){
+        .navbar-bg{
+            background: url(./img/hero-mobile3.png);
+            background-position: center center;
+        background-size: cover;
+        height: 100vh;
+        }
+        /* .navbar-bg .header-content-container{
+            display: none;
+        } */
     }
 </style>
 
