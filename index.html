@@ -183,7 +183,7 @@
                 <div class="left-bg">
 
                
-                <img src="img/urgent-img/2.png" alt="shape" class="w-100  position-relative" />
+                <!-- <img src="img/urgent-img/2.png" alt="shape" class="w-100  position-relative" /> -->
                 <div class="header-content-container position-absolute">
                     <div>
                         <p>SUPRA PERITUM CO.</p>
@@ -196,7 +196,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="right-bg">
-                    <img src="./img/bg-hero.png" alt="hero bg" class="w-100" />
+                    <!-- <img src="./img/bg-hero.png" alt="hero bg" class="w-100" /> -->
 
                 </div>
             </div>
@@ -206,6 +206,18 @@
 <style>
     .navbar-bg{
         /* height: 100vh; */
+        background: url(./img/hero-desk2.png);
+        background-position: center center;
+        background-size: cover;
+        height: 100vh;
+    }
+    @media(max-width:992px){
+        .navbar-bg{
+            background: url(./img/hero-mobile.png);
+            background-position: center center;
+        background-size: cover;
+        height: 100vh;
+        }
     }
     .navbar-bg .col-lg-6{
         /* height: 100vh; */
@@ -232,7 +244,8 @@
     }
     .navbar-bg .left-bg .header-content-container{
         position: absolute;
-        top: 20%;
+        top:10%;
+        left: 10%;
         padding: 2rem;
     }
     .navbar-bg .left-bg .header-content-container p{
