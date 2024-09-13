@@ -7,7 +7,7 @@
  */
 :root {
   --first: #280f91;
-  --second: #3c96fa;
+  --second: #27e6ff;
   --third: #e687b9;
   --blue: #007bff;
   --indigo: #6610f2;
@@ -62,6 +62,7 @@ body {
   color: #6C6A74;
   text-align: left;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -152,13 +153,13 @@ sup {
 }
 
 a {
-  color: #FF6600;
+  color: var(--second);
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #b34700;
+  color: var(--second);
   text-decoration: underline;
 }
 
@@ -9842,7 +9843,7 @@ h6,
 }
 
 .page-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/page-header.jpg), no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/about-hero.png), no-repeat center center;
   background-size: cover;
 }
 
@@ -9869,7 +9870,7 @@ h6,
 }
 
 .bg-registration {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/registration.jpg), no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), no-repeat center center;
   background-size: cover;
 }
 
@@ -9961,4 +9962,38 @@ h6,
   margin: auto;
   color: #fff !important;
   margin-right: 10px;
+}
+
+/* Home */
+.directory-heading{
+  color: var(--first) !important;
+}
+
+.bg-first{
+  background-color: var(--first);
+}
+
+.directory-card{
+  min-height: 370px;
+}
+
+.hero-bg-img{
+
+}
+
+.navbar-bg{
+  background-color: #e5fbff;
+}
+.upskill-container .mt-5 p{
+  font-size: 15px;
+  padding-bottom: 30px;
+}
+.upskill-heading{
+  letter-spacing: 2px;
+  font-size: 2.3rem;
+}
+
+.text-second{
+  color: var(--second);
+  font-weight: 500 !important;
 }
