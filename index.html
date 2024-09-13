@@ -40,9 +40,9 @@
     <!-- Navbar Start -->
     <div class="container-fluid top-header">
         <div class="row border-top px-xl-5">
-            <div class="col-lg-3 d-none d-lg-block">
+            <div class="col-lg-3">
                 <a class="d-flex align-items-center justify-content-between bg-secondary w-100 text-decoration-none"
-                    data-toggle="collapse" href="#navbar-vertical" style="height: 67px; padding: 0 30px;">
+                    data-toggle="collapse" href="#" style="height: 67px; padding: 0 30px;">
                     <!-- <h5 class="text-primary m-0"><i class="fa fa-book-open mr-2"></i>Subjects</h5>
                     <i class="fa fa-angle-down text-primary"></i> -->
                     <img src="img/Edu-tech-logo.jpeg" class="w-100">
@@ -68,9 +68,9 @@
             </div>
             <div class="col-lg-9">
                 <nav class="navbar navbar-expand-lg navbar-dark navbar-light py-3 py-lg-0 px-0">
-                    <a href="" class="text-decoration-none d-block d-lg-none">
+                    <!-- <a href="" class="text-decoration-none d-block d-lg-none">
                         <h1 class="m-0"><span class="text-primary">E</span>COURSES</h1>
-                    </a>
+                    </a> -->
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -391,7 +391,7 @@
                         Useful Links
                     </h3>
                 </div>
-                <div class="col-lg-6 ">
+                <div class="col-lg-6 my-3">
                     <div class="card-item bg-first d-flex p-3 rounded">
                         <img src="/img/urgent-img/9.png" alt="card" class="mr-3">
                         <div class="d-flex flex-column justify-content-between">
@@ -402,7 +402,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 my-3">
                     <div class="card-item bg-first d-flex p-3 rounded">
                         <img src="/img/urgent-img/10.png" alt="card" class="mr-3">
                         <div class="d-flex flex-column justify-content-between">
@@ -460,15 +460,45 @@
 
    
 
-    <div class="container-fluid mt-2 bg-second">
+    <div class="container-fluid mt-2 bg-second pd-inline">
         <div class="col-12">
             <img src="img/urgent-img/15.png" alt="" class="w-100 position-relative">
-            <h3 class="position-absolute text-white" style="top: 10%;left: 10%;">
+            <h3 class="position-absolute text-white bottom-style">
                 SUPRA PERITUM CO.
             </h3>
         </div>
     </div>
 
+    <div class="container-fluid bg-first p-4">
+        <div class="row text-center">
+            <div class="col-lg-5">
+                <h2 class="text-white">Suggestions?</h2>
+                <h2 class="text-white">Questions?</h2>
+            </div>
+            <div class="col-lg-7 d-flex justify-content-center align-items-center">
+                <button class="form-btn text-uppercase mr-3">
+                    Fill Up our Form
+                </button>
+                <button class="form-btn text-uppercase">
+                    Send an email
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .pd-inline{
+            padding-inline: 0 !important;
+        }
+        .form-btn{
+            background-color: var(--second);
+            border: 0;
+            padding: 10px 15px;
+            border-radius: 10px;
+            color: var(--first);
+            letter-spacing: 2px;
+        }
+    </style>
     <!-- Footer Start -->
     <div class="container-fluid bg-third text-white py-5 px-sm-3 px-lg-5">
         <div class="row pt-5">
@@ -478,7 +508,7 @@
                         <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get In Touch</h5>
                         <p><i class="fa fa-map-marker-alt mr-2"></i>Krishna Apt Shop No.12 | Sector 8, Kamote Navi Mumbai</p>
                         <p><i class="fa fa-phone-alt mr-2"></i>8108129531</p>
-                        <!-- <p><i class="fa fa-envelope mr-2"></i>info@example.com</p> -->
+                        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
                         <div class="d-flex justify-content-start mt-4">
                             <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-square mr-2" href="#"><i
@@ -504,7 +534,7 @@
                 <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Newsletter</h5>
                 <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu
                     kasd sed ea duo ipsum. Dolor duo eirmod sea justo no lorem est diam</p>
-                <div class="w-100">
+                <!-- <div class="w-100">
                     <div class="input-group">
                         <input type="text" class="form-control border-light" style="padding: 30px;"
                             placeholder="Your Email Address">
@@ -512,7 +542,7 @@
                             <button class="btn btn-primary px-4">Sign Up</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
