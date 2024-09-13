@@ -50,6 +50,7 @@
         setDoc(docRef,userData)
         .then(()=>{
             window.location.href='index.html';
+            
         })
         .catch((error)=>{
             console.error("error writing document", error);
@@ -72,6 +73,7 @@
     event.preventDefault();
     const email=document.getElementById('email').value;
     const password=document.getElementById('password').value;
+ 
     const auth=getAuth();
 
     signInWithEmailAndPassword(auth, email,password)
@@ -80,6 +82,8 @@
         const user=userCredential.user;
         localStorage.setItem('loggedInUserId', user.uid);
         window.location.href='index.html';
+        
+
     })
     .catch((error)=>{
         const errorCode=error.code;

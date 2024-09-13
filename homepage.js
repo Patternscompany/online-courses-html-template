@@ -42,11 +42,14 @@ const firebaseConfig = {
 
   const logoutButton=document.getElementById('logout');
 
+
+
+//   console.log(logoutButton);
   logoutButton.addEventListener('click',()=>{
-    localStorage.removeItem('loggedInUserId');
+
     signOut(auth)
     .then(()=>{
-        window.location.href='index.html';
+        window.location.href='signup.html';
     })
     .catch((error)=>{
         console.error('Error Signing out:', error);
