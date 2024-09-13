@@ -10044,3 +10044,8 @@ h6,
 .bg-third{
   background-color: var(--second);
 }
+
+.bottom-style{
+  top: 10%;
+    left: 10%;
+}
