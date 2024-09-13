@@ -62,6 +62,7 @@ body {
   color: #6C6A74;
   text-align: left;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -9961,4 +9962,9 @@ h6,
   margin: auto;
   color: #fff !important;
   margin-right: 10px;
+}
+
+/* Home */
+.directory-heading{
+  color: var(--first) !important;
 }
