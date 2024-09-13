@@ -10474,3 +10474,7 @@ h6,
     background-color: transparent !important;
   }
 }
+.mobile-logo{
+  max-width: 81% !important;
+  height: 50px;
+}
