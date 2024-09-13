@@ -9997,3 +9997,37 @@ h6,
   color: var(--second);
   font-weight: 500 !important;
 }
+
+.lifelong-heading{
+  color: var(--second);
+}
+.bg-second{
+  background-color: #e5fbff;
+}
+.session-sub-heading{
+  color: var(--second);
+  font-size: 17px;
+  font-weight: 400 !important;
+}
+
+.upskill-container img{
+  height: 100vh;
+}
+.text-first{
+  color: var(--first);
+}
+
+.link-heading{
+  font-size: 3rem;
+}
+
+.card-item img{
+  width: 140px;
+  height: 140px;
+  border-radius: 20px;
+}
+
+.card-item h4{
+  color: #fff;
+  font-weight: 300 !important;
+}
