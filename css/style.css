@@ -9762,6 +9762,16 @@ h6,
   bottom: 30px;
   z-index: 11;
 }
+.whatsapp {
+  position: fixed;
+  display: block;
+  right: 30px;
+  bottom: 100px;
+  z-index: 11;
+  background-color: green;
+  color: #fff;
+  border-radius: 50%;
+}
 
 .navbar-light .navbar-nav .nav-link {
   padding: 20px 15px;
@@ -10030,4 +10040,7 @@ h6,
 .card-item h4{
   color: #fff;
   font-weight: 300 !important;
+}
+.bg-third{
+  background-color: var(--second);
 }
