@@ -136,3 +136,8 @@ form div.incorrect input{
 #error-message{
   color:#f06272;
 }
+
+.background-nav{
+  background-color: #D2CFE7;
+  background-position: inherit;
+}
