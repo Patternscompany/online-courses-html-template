@@ -79,11 +79,11 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
                         <div class="navbar-nav py-0">
-                            <a href="/" class="nav-item nav-link active">Home</a>
-                            <a href="about" class="nav-item nav-link">About</a>
-                            <a href="achievements" class="nav-item nav-link">Achievements</a>
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="achievements.html" class="nav-item nav-link">Achievements</a>
                         
-                            <a href="contact" class="nav-item nav-link">Contact</a>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
                            
                              <a class="userName"> <i class="fa fa-user"></i> <span id="userName"></span></a>
     <li id="logoutBtn">Logout</li>
@@ -572,10 +572,10 @@
             <div class="col-md-5 col-lg-3 mb-5">
                 <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Quick Links</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="/"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white mb-2" href="about"><i class="fa fa-angle-right mr-2"></i>About</a>
-                    <a class="text-white mb-2" href="achievements"><i class="fa fa-angle-right mr-2"></i>Achievements</a>
-                    <a class="text-white mb-2" href="contact"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white mb-2" href="achievements.html"><i class="fa fa-angle-right mr-2"></i>Achievements</a>
+                    <a class="text-white mb-2" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact</a>
                     <!-- <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>SEO</a> -->
                 </div>
             </div>
@@ -690,7 +690,7 @@
                 displayUserInfo(user);
             } else {
                 // Redirect to login page if not logged in
-                window.location.href = 'signup';
+                window.location.href = 'signup.html';
             }
         });
 
@@ -699,7 +699,7 @@
         logoutBtn.addEventListener('click', () => {
             signOut(auth).then(() => {
                 showMessage("Logged out successfully.");
-                window.location.href = 'signup';
+                window.location.href = 'signup.html';
             }).catch((error) => {
                 console.error("Error during logout:", error);
             });
