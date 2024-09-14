@@ -294,6 +294,31 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get form values
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value;
+
+        // Construct the WhatsApp message
+        var whatsappMessage = `Name: ${name} \nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
+
+        // WhatsApp phone number (include country code, e.g., +1234567890)
+        var phoneNumber = '+918446857332';
+
+        // Create the WhatsApp URL
+        var whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(whatsappMessage)}`;
+
+        // Redirect to WhatsApp
+        window.location.href = whatsappURL;
+    });
+    </script>
+
 </body>
 
 </html>
