@@ -10475,6 +10475,7 @@ h6,
   }
 }
 .mobile-logo{
-  max-width: 81% !important;
+  min-width: 30% ;
+  max-width: 82% ;
   height: 50px;
 }
